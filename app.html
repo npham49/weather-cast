@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" href="app.css">
+        <title>WeatherCast</title>
+        
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="heading">WeatherCast</h1>
+            <form>
+                <input id="search-box" type="text" placeholder="Enter city name" />
+                <select id="restype">
+                    <option value="current">Current Weather</option>
+                    <option value="daily">7-day Forcast</option>
+                    <option value="hourly">Hourly Forcast</option>
+                </select>
+                <button type="submit">SUBMIT</button>
+                
+            </form>
+            
+            <br>
+            <span id="message-hint">* To be more specific with your city name, you can enter '(city),(country code)'</span>
+            <br>
+            <span id="message-hint">  ie. Victoria,CA</span>
+            <br><br>
+            <span id="message"></span>
+        </div>
+        <div class="container-res">
+            <div class="cityname"></div>
+            <ul class="result-current"></ul>
+        </div>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>

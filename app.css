@@ -1,0 +1,125 @@
+:root {
+    --bg: rgba(47, 47, 162,.9);
+    --dark_blue:#242582;
+    --bright_red:#fa2c59;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+
+}
+body {
+    background-image: url(images/bg-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+ul {
+    list-style: none;
+}
+.container,.container-res {
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:50px;
+    padding:10px;
+    width: 80%;
+    background-color: var(--bg) ;
+    color:whitesmoke;
+}
+.container-res {
+    margin-top: 0;
+}
+.heading,.cityname {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.container form{
+    position:relative;
+    display: flex;
+    align-items: center;
+}
+
+.container form button {
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: var(--bright_red);
+    font-weight: bold;
+    margin-left: 20px;
+    padding:10px 25px;
+    border-radius: 10px;
+}
+.container form input {
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid white;
+    color:white;
+    margin-left: 20px;
+    background-color: inherit;
+    
+}
+
+.container form input::placeholder {
+    color:white;
+}
+
+
+.container form select {
+    color:white;
+    margin-left:20px;
+    padding:5px;
+    border-radius: 5px;
+    background-color: var(--dark_blue);
+    border:2px solid white;
+}
+.container form button:hover {
+    cursor: pointer;
+    background-color:darkred;
+}
+
+#message,#message-hint {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.container-res .result-current {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-gap: 30px;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.container-res .city {
+    position: relative;
+    background-color: var(--dark_blue);
+    color:white;
+    text-align: center;
+    width: 150px;
+    padding:10px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:700px) {
+    .container form{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    input,button,select {
+        margin-top:5px;
+        margin-bottom: 5px;
+    }
+    .body {
+        padding: 0;
+    }
+    .container,.container-res {
+        width: 90%;
+    }
+}
